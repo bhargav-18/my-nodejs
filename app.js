@@ -8,7 +8,9 @@ const mongodb = 'mongodb+srv://Bhargav:India123@cluster0.gnavt.mongodb.net/item-
 mongoose.connect(mongodb, { useNewUrlParser: true ,
 useUnifiedTopology: true }).then(()=>{
 console.log('connected')
-app.listen(3000)}).
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });}).
 catch(err=>console.log(err))
 
 app.set('view engine', 'ejs');
