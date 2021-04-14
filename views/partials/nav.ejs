@@ -1,13 +1,16 @@
-<div class="navbar-fixed">
-  <nav>
+<nav>
     <div class="nav-wrapper container">
-      <a href="/">Home</a>
-      &emsp;&emsp;&emsp;
-      &emsp;&emsp;&emsp;
-      &emsp;&emsp;&emsp;
-      &emsp;&emsp;&emsp;
-      &emsp;
-      <a href="./add-item">Add Item</a>
+      <a href="/" class="brand-logo">Shopping Cart</a>
+      <a href="#" class="sidenav-trigger"  data-target="slide_out"><i class="material-icons">menu</i></a>
+      <a href="./add-item" class="right hide-on-med-and-down">Add Item</a>
     </div>
   </nav>
-</div>
+  <ul class="sidenav" id="slide_out">
+    <li><a href="/">Shopping Cart</a></li>
+    <li><a href="./add-item">Add Item</a></li>
+  </ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  const slide_menu = document.querySelectorAll(".sidenav");
+  M.Sidenav.init(slide_menu,{});
+</script>
