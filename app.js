@@ -4,7 +4,7 @@ const Item = require('./models/items')
 const app = express();
 
 app.use(express.urlencoded({extended:true}));
-const mongodb = 'mongodb+srv://Bhargav:India123@cluster0.gnavt.mongodb.net/item-database?retryWrites=true&w=majority'
+const mongodb = 'mongodb+srv://UserName:Password@cluster0.gnavt.mongodb.net/item-database?retryWrites=true&w=majority'
 mongoose.connect(mongodb, { useNewUrlParser: true ,
 useUnifiedTopology: true }).then(()=>{
 console.log('connected')
